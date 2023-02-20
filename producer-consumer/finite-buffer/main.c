@@ -31,7 +31,7 @@ void *consumer(void *args)
         sem_wait(&items);
         sem_wait(&mutex);
         buffer[out] = 0;
-        out++;
+        out = (out + 1) % BUFFER_SIZE;
         sem_post(&spaces);
         sem_post(&mutex);
     }
