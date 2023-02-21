@@ -43,7 +43,7 @@ int main()
     for (int i = 0; i < 20; i++)
     {
         pthread_create(&producers[i], NULL, producer, NULL);
-        pthread_create(&consumers[i], NULL, producer, NULL);
+        pthread_create(&consumers[i], NULL, consumer, NULL);
     }
     for (int i = 0; i < 20; i++)
     {
